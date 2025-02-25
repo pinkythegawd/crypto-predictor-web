@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Market Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Crypto Market Predictor</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#predictions">Predictions</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <h2>Predict the Future of Bitcoin and Ethereum</h2>
+            <p>Get real-time data and insights to make informed decisions.</p>
+        </section>
+
+        <section id="predictions">
+            <h2>Market Predictions</h2>
+            <div class="crypto-container">
+                <div class="crypto-card">
+                    <h3>Bitcoin (BTC)</h3>
+                    <p id="btc-price">$0.00</p>
+                    <button onclick="fetchData('BTC')">Get Prediction</button>
+                </div>
+                <div class="crypto-card">
+                    <h3>Ethereum (ETH)</h3>
+                    <p id="eth-price">$0.00</p>
+                    <button onclick="fetchData('ETH')">Get Prediction</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>Latest News</h2>
+            <div class="news-container">
+                <article>
+                    <h3>Crypto Market Trends</h3>
+                    <p>Stay updated with the latest trends in the cryptocurrency market.</p>
+                </article>
+                <article>
+                    <h3>Investment Strategies</h3>
+                    <p>Learn about effective strategies for investing in cryptocurrencies.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We provide insights and predictions for cryptocurrency markets to help you make informed investment decisions.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Crypto Market Predictor. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
