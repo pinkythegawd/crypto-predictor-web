@@ -42,7 +42,9 @@ We welcome contributions to CryptoCrystalBall! As we continue to develop and add
 
 ## Contributing 🤝
 
-Contributions are welcome! Feel free to open issues and pull requests.
+Contributions are welcome! As CryptoCrystalBall is actively under development, you may encounter bugs or experience unexpected behavior, such as buttons not functioning correctly. If you notice anything unusual, we highly recommend that you open an issue or contact me directly. Your feedback is crucial for improving the site and is greatly appreciated.
+
+Furthermore, if you are interested in contributing by rewriting or enhancing the code, your efforts are highly valued. Please feel free to submit pull requests or reach out to discuss your ideas.
 
 ## Support 🙋‍♂️
 
