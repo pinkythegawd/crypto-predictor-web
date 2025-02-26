@@ -8,30 +8,34 @@
 </head>
 <body>
     <header>
-        <h1>Real-Time Bitcoin and Ethereum Predictions</h1>
-        <nav>
-            <ul>
-                <li><a href="home.html">Home</a></li>
+        <div class="container">
+            <h1>Real-Time Bitcoin and Ethereum Predictions</h1>
+            <nav>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
                     <li><a href="predictions.html">Predictions</a></li>
                     <li><a href="news.html">News</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="forum.html">Forum</a></li>
                     <li><a href="portfolio.html">Portfolio</a></li>
-            </ul>
-        </nav>
+                </ul>
+            </nav>
+        </div>
     </header>
     <main>
         <section id="predictions">
             <h2>Market Predictions</h2>
-            <div id="bitcoin-prediction">
-                <h3>Bitcoin Prediction</h3>
-                <p>Current Price: <span id="btc-price">Loading...</span></p>
-                <canvas id="btc-chart"></canvas>
-            </div>
-            <div id="ethereum-prediction">
-                <h3>Ethereum Prediction</h3>
-                <p>Current Price: <span id="eth-price">Loading...</span></p>
-                <canvas id="eth-chart"></canvas>
+            <div class="prediction-container">
+                <div class="prediction-card" id="bitcoin-prediction">
+                    <h3>Bitcoin Prediction</h3>
+                    <p>Current Price: <span id="btc-price">Loading...</span></p>
+                    <canvas id="btc-chart"></canvas>
+                </div>
+                <div class="prediction-card" id="ethereum-prediction">
+                    <h3>Ethereum Prediction</h3>
+                    <p>Current Price: <span id="eth-price">Loading...</span></p>
+                    <canvas id="eth-chart"></canvas>
+                </div>
             </div>
         </section>
         <section id="market-map">
@@ -43,87 +47,7 @@
         <p>&copy; 2025 Crypto Prediction. All rights reserved.</p>
     </footer>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <script src="{{ url_for('static', filename='charts.js') }}"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script>
-        // Fetch historical data for charts
-        async function fetchHistoricalData() {
-            const response = await fetch('/historical-data');
-            const data = await response.json();
-            return data;
-        }
-
-        async function createCharts() {
-            const data = await fetchHistoricalData();
-
-            // Bitcoin Chart
-            const btcCtx = document.getElementById('btc-chart').getContext('2d');
-            new Chart(btcCtx, {
-                type: 'line',
-                data: {
-                    labels: data.dates,
-                    datasets: [{
-                        label: 'Bitcoin Price (USD)',
-                        data: data.btc_prices,
-                        borderColor: 'rgba(255, 99, 132, 1)',
-                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
-                        fill: true,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Date'
-                            }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Price in USD'
-                            }
-                        }
-                    }
-                }
-            });
-
-            // Ethereum Chart
-            const ethCtx = document.getElementById('eth-chart').getContext('2d');
-            new Chart(ethCtx, {
-                type: 'line',
-                data: {
-                    labels: data.dates,
-                    datasets: [{
-                        label: 'Ethereum Price (USD)',
-                        data: data.eth_prices,
-                        borderColor: 'rgba(54, 162, 235, 1)',
-                        backgroundColor: 'rgba(54, 162, 235, 0.2)',
-                        fill: true,
-                    }]
-                },
-                options: {
-                    responsive: true,
-                    scales: {
-                        x: {
-                            title: {
-                                display: true,
-                                text: 'Date'
-                            }
-                        },
-                        y: {
-                            title: {
-                                display: true,
-                                text: 'Price in USD'
-                            }
-                        }
-                    }
-                }
-            });
-        }
-
-        // Call the function to create charts
-        createCharts();
-    </script>
 </body>
 </html>
