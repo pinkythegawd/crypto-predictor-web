@@ -1,25 +1,22 @@
-// Function to fetch cryptocurrency data
-async function fetchData(crypto) {
-    const url = `https://api.coingecko.com/api/v3/simple/price?ids=${crypto.toLowerCase()}&vs_currencies=usd`;
-
+const fetchCryptoData = async () => {
     try {
-        const response = await fetch(url);
-        const data = await response.json();
+        const btcResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd');
+        const ethResponse = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd');
 
-        // Update the price on the webpage
-        if (crypto === 'BTC') {
-            document.getElementById('btc-price').innerText = `$${data.btc.usd.toLocaleString()}`;
-        } else if (crypto === 'ETH') {
-            document.getElementById('eth-price').innerText = `$${data.eth.usd.toLocaleString()}`;
-        }
+        const btcData = await btcResponse.json();
+        const ethData = await ethResponse.json();
+
+        document.getElementById('btc-price').innerText = `$${btcData.bitcoin.usd}`;
+        document.getElementById('eth-price').innerText = `$${ethData.ethereum.usd}`;
+        
+        // Optionally, you can add code here to update charts or other UI elements
     } catch (error) {
-        console.error('Error fetching data:', error);
-        alert('Failed to fetch data. Please try again later.');
+        console.error('Error fetching cryptocurrency data:', error);
     }
-}
-
-// Optional: Fetch initial data on page load
-window.onload = function() {
-    fetchData('BTC');
-    fetchData('ETH');
 };
+
+// Call the function to fetch data
+fetchCryptoData();
+
+// Set an interval to refresh data every minute
+setInterval(fetchCryptoData, 60000);
