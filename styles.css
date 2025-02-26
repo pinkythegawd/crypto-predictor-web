@@ -133,3 +133,53 @@ footer {
 #post-form button:hover {
     background-color: #2c3e50;
 }
+
+/* Additional styles for the portfolio page */
+#add-crypto {
+    margin: 20px 0;
+}
+
+#crypto-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#crypto-form label {
+    margin: 10px 0 5px;
+}
+
+#crypto-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#crypto-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#crypto-form button:hover {
+    background-color: #2c3e50;
+}
+
+#portfolio {
+    margin-top: 30px;
+}
+
+#portfolio-list {
+    margin-top: 20px;
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+#portfolio-list p {
+    text-align: center;
+}
