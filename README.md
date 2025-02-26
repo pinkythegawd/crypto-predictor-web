@@ -39,6 +39,7 @@ We welcome contributions to CryptoCrystalBall! As we continue to develop and add
 * HTML
 * CSS
 * JavaScript (for future interactive features)
+* Python
 
 ## Contributing 🤝
 
