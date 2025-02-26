@@ -83,3 +83,53 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+/* Additional styles for the forum page */
+.post-container {
+    margin: 20px 0;
+}
+
+.post {
+    background: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.post h3 {
+    margin-bottom: 10px;
+}
+
+#new-post {
+    margin-top: 30px;
+}
+
+#post-form {
+    display: flex;
+    flex-direction: column;
+}
+
+#post-form label {
+    margin: 10px 0 5px;
+}
+
+#post-form input, #post-form textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#post-form button {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #35424a;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#post-form button:hover {
+    background-color: #2c3e50;
+}
