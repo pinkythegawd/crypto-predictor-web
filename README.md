@@ -16,8 +16,21 @@ CryptoCrystalBall is a cutting-edge website designed to help you navigate the ex
 
 ## Getting Started 🚀
 
-1.  **Clone the repository:** `git clone https://github.com/pinkythegawd/crypto-predictor-web.git`
-2.  **Open `index.html` in your browser.**
+You can access CryptoCrystalBall in two ways:
+
+1. **Visit the website:** [https://pinkythegawd.github.io/crypto-predictor-web/](https://pinkythegawd.github.io/crypto-predictor-web/) 
+
+2. **Run it locally:**
+   * **Clone the repository:** `git clone https://github.com/pinkythegawd/crypto-predictor-web.git`
+   * **Open `index.html` in your browser.**
+
+**Important Notice:**
+
+This project and its associated website are the intellectual property of pinkythegawd. You are **strictly prohibited** from creating or hosting a duplicate website of this project on any other platform or link without explicit written permission from pinkythegawd. Unauthorized duplication or distribution will result in immediate action, including but not limited to, the removal of the infringing content, making the repository private, and filing a formal complaint.
+
+**Contribute and Collaborate!**
+
+We welcome contributions to CryptoCrystalBall! As we continue to develop and add new features and benefits, your input is highly valued. If you're interested in supporting the project or collaborating with us, please feel free to contact me.
 
 **Note:** This project is currently under development. New features and functionalities are being added regularly.
 
