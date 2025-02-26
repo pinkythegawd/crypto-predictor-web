@@ -3,36 +3,85 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <title>Crypto Market Prediction</title>
+    <title>Crypto Market Predictor</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-    <header class="bg-primary text-white">
+    <header>
         <div class="container">
-            <h1 class="py-3">Crypto Market Prediction</h1>
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Me</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('news') }}">News</a></li>
-                    <li class="nav-item"><a class="nav-link" href="{{ url_for('predictions') }}">Predictions</a></li>
+            <h1>Crypto Market Predictor</h1>
+            <nav>
+                <ul>
+                    <li><a href="predictions.html">Predictions</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="forum.html">Community Forum</a></li>
+                    <li><a href="portfolio.html">Portfolio Tracker</a></li>
                 </ul>
             </nav>
+            <button id="dark-mode-toggle" class="toggle-button">🌙</button>
         </div>
     </header>
+
     <main>
-        <div class="container">
-            <section class="hero text-center my-5">
-                <h2>Welcome to Crypto Market Prediction</h2>
-                <p>Your go-to platform for the latest predictions and insights on Bitcoin, Ethereum, and more!</p>
-                <a href="{{ url_for('predictions') }}" class="btn btn-success">Get Started</a>
-            </section>
-        </div>
+        <section id="home" class="hero">
+            <h2>Predict the Future of Bitcoin and Ethereum</h2>
+            <p>Get real-time data and insights to make informed decisions.</p>
+        </section>
+
+        <section id="predictions">
+            <h2>Market Predictions</h2>
+            <div class="crypto-container">
+                <div class="crypto-card">
+                    <h3>Bitcoin (BTC)</h3>
+                    <p id="btc-price">$0.00</p>
+                    <button onclick="fetchData('BTC')">Get Prediction</button>
+                </div>
+                <div class="crypto-card">
+                    <h3>Ethereum (ETH)</h3>
+                    <p id="eth-price">$0.00</p>
+                    <button onclick="fetchData('ETH')">Get Prediction</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="news">
+            <h2>Latest News</h2>
+            <div class="news-container">
+                <article>
+                    <h3>Crypto Market Trends</h3>
+                    <p>Stay updated with the latest trends in the cryptocurrency market.</p>
+                </article>
+                <article>
+                    <h3>Investment Strategies</h3>
+                    <p>Learn about effective strategies for investing in cryptocurrencies.</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="forum">
+            <h2>Community Forum</h2>
+            <p>Connect with other crypto enthusiasts, share strategies, and discuss market trends.</p>
+            <button onclick="alert('Forum feature coming soon!')">Join the Discussion</button>
+        </section>
+
+        <section id="portfolio">
+            <h2>Portfolio Tracker</h2>
+            <p>Manage your favorite cryptocurrencies and track their performance.</p>
+            <button onclick="alert('Portfolio feature coming soon!')">Open Portfolio</button>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We provide insights and predictions for cryptocurrency markets to help you make informed investment decisions.</p>
+        </section>
     </main>
-    <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2023 Crypto Prediction. All rights reserved.</p>
+
+    <footer>
+        <p>&copy; 2023 Crypto Market Predictor. All rights reserved.</p>
     </footer>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
