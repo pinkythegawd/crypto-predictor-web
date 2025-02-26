@@ -4,35 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <title>Crypto Market Prediction</title>
 </head>
 <body>
-    <header>
+    <header class="bg-primary text-white">
         <div class="container">
-            <h1>Crypto Market Prediction</h1>
-            <nav>
-                <ul>
-                    <li><a href="{{ url_for('home') }}">Home</a></li>
-                    <li><a href="{{ url_for('about') }}">About Me</a></li>
-                    <li><a href="{{ url_for('news') }}">News</a></li>
-                    <li><a href="{{ url_for('predictions') }}">Predictions</a></li>
+            <h1 class="py-3">Crypto Market Prediction</h1>
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('home') }}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('about') }}">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('news') }}">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{{ url_for('predictions') }}">Predictions</a></li>
                 </ul>
             </nav>
         </div>
     </header>
     <main>
         <div class="container">
-            <section class="hero">
+            <section class="hero text-center my-5">
                 <h2>Welcome to Crypto Market Prediction</h2>
                 <p>Your go-to platform for the latest predictions and insights on Bitcoin, Ethereum, and more!</p>
-                <a href="{{ url_for('predictions') }}" class="btn">Get Started</a>
+                <a href="{{ url_for('predictions') }}" class="btn btn-success">Get Started</a>
             </section>
         </div>
     </main>
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Crypto Prediction. All rights reserved.</p>
-        </div>
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 Crypto Prediction. All rights reserved.</p>
     </footer>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
